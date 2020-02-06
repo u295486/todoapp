@@ -6,8 +6,6 @@ import AddNew from './components/AddNew/AddNew'
 import Counter from './components/Counter/Counter'
 import List from './components/List/List'
 import { connect } from 'react-redux'
-//import Grupowe from './components/grupowe'
-//import NavBar from './components/navbar'
 
 class toDoApp extends Component {
   handleDelete = index => {
@@ -59,73 +57,6 @@ class toDoApp extends Component {
       </main>
     )
   }
-
-  /*  state = {
-    counters: [
-      { id: 1, value: 3, liked: true },
-      { id: 2, value: 40 },
-      { id: 3, value: 56, liked: true },
-      { id: 4, value: 2 },
-      { id: 5, value: 3434 },
-    ],
-  }
-
-  handleIncrement = counter => {
-    const counters = [...this.state.counters]
-    const index = counters.indexOf(counter)
-    counters[index] = { ...counter }
-    counters[index].value++
-    this.setState({ counters: counters })
-  }
-
-  handleDecrement = counter => {
-    const counters = [...this.state.counters]
-    const index = counters.indexOf(counter)
-    counters[index] = { ...counter }
-    counters[index].value--
-    this.setState({ counters: counters })
-  }
-
-  handleDelete = counterId => {
-    const counters = this.state.counters.filter(c => counterId !== c.id)
-    this.setState({ counters })
-  }
-
-  handleReset = () => {
-    const counters = this.state.counters.map(c => {
-      c.value = 0
-      return c
-    })
-    this.setState({ counters })
-  }
-
-  handleLiked = counter => {
-    const counters = [...this.state.counters]
-    const index = counters.indexOf(counter)
-    counters[index] = { ...counter }
-    counters[index].liked = !counters[index].liked
-    this.setState({ counters: counters })
-  }
-
-  render() {
-    return (
-      <>
-        <NavBar
-          totalCounters={this.state.counters.filter(c => c.value > 0).length}
-        />
-        <main className="container">
-          <Grupowe
-            counters={this.state.counters}
-            onReset={this.handleReset}
-            onIncrement={this.handleIncrement}
-            onDecrement={this.handleDecrement}
-            onDelete={this.handleDelete}
-            onLikeToggle={this.handleLiked}
-          />
-        </main>
-      </>
-    )
-  }*/
 }
 
 const mapStateToProps = state => {
